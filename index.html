@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hands-Free Assistant (V1)</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="header">
+      <h1>Hands-Free Assistant</h1>
+      <p class="sub">Wake phrase (V1): <strong>“Hey Assist”</strong> <span class="pill">prototype</span></p>
+    </header>
+
+    <section class="card">
+      <div class="row">
+        <button id="btnListen" class="btn">Start Listening</button>
+        <button id="btnStop" class="btn secondary" disabled>Stop</button>
+        <span id="status" class="status">Idle</span>
+      </div>
+
+      <label class="label" for="liveText">Live transcript</label>
+      <textarea id="liveText" class="textarea" rows="6" placeholder="Your speech will appear here..."></textarea>
+
+      <div class="row space">
+        <input id="category" class="input" placeholder="Category (e.g., Shop, Research, Personal)" />
+        <button id="btnSave" class="btn" disabled>Save Note</button>
+        <button id="btnClear" class="btn secondary">Clear</button>
+      </div>
+
+      <p class="hint">
+        Tip: In V1, we’re using the browser’s speech recognition (works best in Chrome/Edge).
+      </p>
+    </section>
+
+    <section class="card">
+      <div class="row space">
+        <h2 class="h2">Saved notes</h2>
+        <button id="btnDeleteAll" class="btn danger">Delete All</button>
+      </div>
+      <ul id="notesList" class="notes"></ul>
+      <p id="empty" class="empty">No notes yet.</p>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
