@@ -213,7 +213,7 @@ btnSave.onclick = () => {
   });
   saveNotes(notes);
 
-  liveText.value = ""+ combined;
+  liveText.value = "";
   wakeDetected = false;
   btnSave.disabled = true;
 
